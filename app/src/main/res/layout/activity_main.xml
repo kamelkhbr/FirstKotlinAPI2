@@ -10,27 +10,41 @@
 
     <ImageView
         android:id="@+id/fda_imageview"
-        android:layout_width="394dp"
-        android:layout_height="258dp"
-        android:layout_marginTop="44dp"
+        android:layout_width="395dp"
+        android:layout_height="181dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/fdaimg2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:layout_width="313dp"
+        android:layout_height="83dp"
+        android:layout_margin="50dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/fdalogo"
+        app:layout_constraintBottom_toTopOf="@+id/fda_recyclerview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fda_imageview"
+        app:layout_constraintVertical_bias="0.571" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/fda_recyclerview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="409dp"
+        android:layout_height="342dp"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fda_imageview"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:listitem="@layout/fda_result_item"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fda_imageview"
+        app:layout_constraintVertical_bias="0.77"
+        tools:listitem="@layout/fda_result_item" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

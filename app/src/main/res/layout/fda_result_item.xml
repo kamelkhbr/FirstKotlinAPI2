@@ -8,9 +8,9 @@
     android:layout_margin="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="420dp"
-        android:layout_height="216dp"
-        android:background="#E2D9A3E3">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E288B6E4">
 
 
         <TextView
@@ -19,75 +19,79 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:fontFamily="sans-serif-black"
-            tools:text="Recalling Firm"
             android:textAlignment="center"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.428"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Recalling Firm" />
 
         <TextView
             android:id="@+id/recall_reasontv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="Airbrush color has the potential to be contaminated with mold, yeast or bacteria."
-            android:textAlignment="viewStart"
+            android:layout_marginTop="16dp"
+            android:layout_margin="6dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.075"
+            app:layout_constraintHorizontal_bias="0.009"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recall_firmtv" />
+            app:layout_constraintTop_toBottomOf="@+id/status_tv"
+            tools:text="Recall reason" />
 
         <TextView
             android:id="@+id/prod_quantitytv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
-            android:text="Product Quantity"
-            android:textAlignment="viewStart"
+            android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
+
+            android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.017"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recall_reasontv" />
+            app:layout_constraintTop_toBottomOf="@+id/recall_firmtv"
+            tools:text="Product Quantity" />
 
         <TextView
             android:id="@+id/status_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            tools:text="Terminated"
-            android:textAlignment="viewStart"
+            android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
+
+            android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.022"
+            app:layout_constraintHorizontal_bias="0.014"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/prod_quantitytv" />
+            app:layout_constraintTop_toBottomOf="@+id/prod_quantitytv"
+            tools:text="status" />
 
         <TextView
             android:id="@+id/country_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_margin="16dp"
+
             android:layout_marginBottom="16dp"
-            tools:text="United States"
             android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.02"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintEnd_toStartOf="@+id/city_tv"
+            app:layout_constraintHorizontal_bias="0.927"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="county" />
 
         <TextView
             android:id="@+id/city_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            tools:text="Atlanta"
             android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.05"
-            app:layout_constraintStart_toEndOf="@+id/country_tv" />
+            app:layout_constraintHorizontal_bias="0.592"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="city" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

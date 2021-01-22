@@ -39,9 +39,9 @@ class MedicalAdapter(private var medicalList: MutableList<FdaResult>):RecyclerVi
 
         holder.apply {
             recallFirmTextView.text = medicalItem.recalling_firm
-            recallReasonTextView.text = medicalItem.reason_for_recall
-            recallQTTextView.text = medicalItem.product_quantity
-            statusTextView.text = medicalItem.status
+            recallReasonTextView.text = "Recall Reason: "+medicalItem.reason_for_recall
+            recallQTTextView.text = "Quantity: "+medicalItem.product_quantity
+            statusTextView.text = "Status: "+medicalItem.status
             countryTextView.text = medicalItem.country
             cityTextView.text = medicalItem.city
         }
