@@ -1,6 +1,6 @@
 package org.mousehole.firstkotlinapi.model
 
-data class MedicalResults(
+data class FdaResult(
     val address_1: String,
     val address_2: String,
     val center_classification_date: String,

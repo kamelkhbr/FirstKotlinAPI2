@@ -4,15 +4,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
 import org.mousehole.firstkotlinapi.R
-import org.mousehole.firstkotlinapi.model.MedicalResults
-import org.mousehole.firstkotlinapi.view.adapter.MedicalAdapter.*
+import org.mousehole.firstkotlinapi.model.FdaResult
 
-class MedicalAdapter(var medicalList: List<MedicalResults>):RecyclerView.Adapter<MedicalViewHolder>() {
+class MedicalAdapter(private var medicalList: MutableList<FdaResult>):RecyclerView.Adapter<MedicalAdapter.MedicalViewHolder>() {
 
-    fun updateMedicalList (medicalList: List<MedicalResults>){
+    fun updateMedicalList (medicalList: MutableList<FdaResult>){
         this.medicalList= medicalList
         notifyDataSetChanged()
     }

@@ -9,15 +9,16 @@ import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SnapHelper
 import org.mousehole.firstkotlinapi.R
+import org.mousehole.firstkotlinapi.model.FdaResult
 import org.mousehole.firstkotlinapi.view.adapter.MedicalAdapter
-import org.mousehole.firstkotlinapi.viewmodel.MedicalViewModel
+import org.mousehole.firstkotlinapi.viewmodel.MedicalViewModel2
 
 class MainActivity : AppCompatActivity() {
 
-    private val viewModel : MedicalViewModel by viewModels()
+    private val viewModel : MedicalViewModel2 by viewModels()
 
     private lateinit var medicalRecyclerView: RecyclerView
-    private val medicalAdapter: MedicalAdapter = MedicalAdapter(listOf())
+    private val medicalAdapter: MedicalAdapter = MedicalAdapter(mutableListOf())
 
 
 
@@ -33,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.medicalLiveData.observe(this, Observer {
             Log.d("TAG_X", "Results obtained...${it.size}")
-            medicalAdapter.updateMedicalList(it)
+            medicalAdapter.updateMedicalList(it as MutableList<FdaResult>)
         })
         viewModel.getMedical()
 

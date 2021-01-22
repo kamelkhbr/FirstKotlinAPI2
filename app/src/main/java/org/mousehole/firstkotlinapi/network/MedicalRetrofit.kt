@@ -1,12 +1,11 @@
 package org.mousehole.firstkotlinapi.network
 
-import android.database.Observable
-import org.mousehole.firstkotlinapi.model.MedicalResults
+import org.mousehole.firstkotlinapi.model.FdaResponse
+import org.mousehole.firstkotlinapi.model.FdaResult
 import org.mousehole.firstkotlinapi.util.Constants.Companion.BASE_URL
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import java.util.*
 
 class MedicalRetrofit {
 
@@ -28,7 +27,6 @@ class MedicalRetrofit {
         retrofit.create(MedicalAPI :: class.java)
 
 
-    fun getMedical(): io.reactivex.Observable<List<MedicalResults>> {
-        return medicalAPI.getMedical()
-    }
+    fun getMedical(): io.reactivex.Observable<FdaResponse> = medicalAPI.getMedical()
+
 }
